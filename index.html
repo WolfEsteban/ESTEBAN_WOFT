@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de Inscripción</title>
+    <link rel="stylesheet" href="STYLE.CSS" />
+  </head>
+  <body>
+    <h1>Formulario de Inscripción</h1>
+    <p>Por favor, complete este formulario con la información solicitada.</p>
+    <form method="post" action="https://mi-sitio.com/registro">
+      <fieldset>
+        <label for="primer-nombre">Ingrese su primer nombre: <input id="primer-nombre" name="primer-nombre" type="text" required /></label>
+        <label for="apellido">Ingrese su apellido: <input id="apellido" name="apellido" type="text" required /></label>
+        <label for="correo">Ingrese su correo electrónico: <input id="correo" name="correo" type="email" required /></label>
+        <label for="contraseña">Cree una nueva contraseña: <input id="contraseña" name="contraseña" type="password" pattern="[a-z0-9]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Tipo de cuenta (obligatorio)</legend>
+        <label for="cuenta-personal"><input id="cuenta-personal" type="radio" name="tipo-cuenta" class="inline" checked /> Personal</label>
+        <label for="cuenta-empresa"><input id="cuenta-empresa" type="radio" name="tipo-cuenta" class="inline" /> Empresa</label>
+      </fieldset>
+      <fieldset>
+        <label for="foto-perfil">Sube una foto de perfil: <input id="foto-perfil" type="file" name="archivo" /></label>
+        <label for="edad">Ingresa tu edad (en años): <input id="edad" type="number" name="edad" min="13" max="120" /></label>
+        <label for="como-te-enteraste">¿Cómo te enteraste de nosotros?
+          <select id="como-te-enteraste" name="como-te-enteraste">
+            <option value="">(selecciona una opción)</option>
+            <option value="1">Blog oficial</option>
+            <option value="2">Canal de YouTube</option>
+            <option value="3">Foro</option>
+            <option value="4">Otro</option>
+          </select>
+        </label>
+        <label for="biografia">Proporciona una biografía:
+          <textarea id="biografia" name="biografia" rows="3" cols="30" placeholder="Me gusta programar mientras tomo café..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terminos-y-condiciones">
+        <input class="inline" id="terminos-y-condiciones" type="checkbox" required name="terminos-y-condiciones" /> Acepto los <a href="https://www.mi-sitio.com/terminos-de-servicio/">términos y condiciones</a>
+      </label>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
